@@ -1,0 +1,74 @@
+header {
+  background-color: var(--blue);
+  padding: 3px 0px;
+}
+
+.logo h3 {
+  font-size: 24px !important;
+  line-height: 150% !important;
+  letter-spacing: 0.1rem !important;
+  color: white !important;
+}
+
+.col_align_center div {
+  display: flex;
+  align-items: center;
+}
+
+.search_input_container {
+  background-color: rgba(255, 255, 255, 1);
+  height: 38px;
+  border-radius: 5px;
+  border: 0px !important;
+  color: black;
+  outline: none;
+  padding: 0px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+.search_input_container .search_input {
+  background-color: transparent;
+  border: 0px !important;
+  outline: none !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+  letter-spacing: 0.7px;
+  font-weight: 500;
+}
+
+.search_input_container .search_input::placeholder {
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.search_input_container .search_input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  position: relative;
+  background-image: url('/assets/images/multiply.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.search_input:focus,
+.search_input:active {
+  outline: none;
+}
+
+.notification_count {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--red);
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  border-radius: 50%;
+  top: 0;
+  left: 20%;
+}

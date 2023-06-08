@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {CloudinaryModule} from '@cloudinary/ng';
+import { CloudinaryModule } from '@cloudinary/ng';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
@@ -15,7 +14,17 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { FriendsComponent } from './pages/friends/friends.component';
 import { EventsComponent } from './pages/events/events.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HttpClientModule } from '@angular/common/http';
+import { HttpService } from './services/http.service';
+import { SocketService } from './services/socket.service';
+import { AuthService } from './services/auth.service';
+import { GlobalsService } from './services/globals.service';
+import { MessageService } from './services/message.service';
+import { NotificationService } from './services/notification.service';
+import { PostService } from './services/post.service';
+import { RequestService } from './services/request.service';
+import { UserService } from './services/user.service';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -35,9 +44,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     CloudinaryModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MaterialModule
   ],
-  providers: [],
+  providers: [
+    HttpService,
+    SocketService,
+    AuthService,
+    GlobalsService,
+    MessageService,
+    NotificationService,
+    PostService,
+    RequestService,
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

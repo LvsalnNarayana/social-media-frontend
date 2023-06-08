@@ -1,0 +1,37 @@
+<header>
+  <div class="_container col_align_center row g-0">
+    <div class=" cursor_pointer col-lg-2 col-md-3 col-sm-6 col-6">
+      <h3 class="text_white">Flybook</h3>
+    </div>
+    <div class="search_bar col-lg-7 col-md-6 d-none d-md-flex justify-content-center me-5">
+      <form class="w-100  d-flex justify-content-center">
+        <div class="search_input_container  w_60">
+          <input placeholder="Search People, Community, Post..." class="search_input w-100" type="search"
+            name="universal_search" id="universal_search">
+        </div>
+      </form>
+    </div>
+    <div class="account_controls col-lg-2 col-md-3 col-sm-6 col-6 row g-0">
+      <div class="col cursor_pointer" [matMenuTriggerFor]="message_menu">
+        <img class="img_30" src="assets/images/chat.png" alt="">
+      </div>
+      <mat-menu #message_menu="matMenu" [xPosition]="'before'" class="custom_mat_menu message_mat_menu">
+        <h1>hello</h1>
+      </mat-menu>
+      <div class="col cursor_pointer position-relative" [matMenuTriggerFor]="notification_menu">
+        <img class="img_30" src="assets/images/bell.png" alt="">
+        <span class="notification_count">{{'2'}}</span>
+      </div>
+      <mat-menu #notification_menu="matMenu" class="custom_mat_menu notification_mat_menu">
+        <h1>hello</h1>
+      </mat-menu>
+      <div class="col cursor_pointer" [matMenuTriggerFor]="profile_menu">
+        <img class="me-2 img_30" src="" alt="">
+        <p class="text_white">Tommy</p>
+      </div>
+      <mat-menu #profile_menu="matMenu" [xPosition]="'before'" class="custom_mat_menu profile_mat_menu">
+        <h1>hello</h1>
+      </mat-menu>
+    </div>
+  </div>
+</header>

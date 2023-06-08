@@ -11,7 +11,8 @@ import { EventComponent } from './event/event.component';
 import { ProfileSidebarComponent } from './profile-sidebar/profile-sidebar.component';
 import { ContactSidebarComponent } from './contact-sidebar/contact-sidebar.component';
 import { MessageComponent } from './message/message.component';
-
+import { HeaderComponent } from './header/header.component';
+import { MaterialModule } from '../material.module';
 
 
 @NgModule({
@@ -26,10 +27,26 @@ import { MessageComponent } from './message/message.component';
     EventComponent,
     ProfileSidebarComponent,
     ContactSidebarComponent,
-    MessageComponent
+    MessageComponent,
+    HeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule
+  ],
+  exports: [
+    LoginComponent,
+    SignupComponent,
+    PostComponent,
+    CardComponent,
+    MesageBoxComponent,
+    MessageDialogComponent,
+    CommentBoxComponent,
+    EventComponent,
+    ProfileSidebarComponent,
+    ContactSidebarComponent,
+    MessageComponent,
+    HeaderComponent
   ]
 })
 export class SharedModule { }
