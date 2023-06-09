@@ -14,7 +14,7 @@ export class SocketService {
   socket!: Socket;
   connect() {
     this.socket = io({
-      path: 'http://localhost:3000/',
+      path: 'http://localhost:3000',
       withCredentials: true,
     });
     this.socket.on("connect_error", (err) => {
